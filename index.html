@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复利计算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>复利计算器</h1>
+            
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="principal">本金</label>
+                    <input type="number" id="principal" placeholder="请输入本金">
+                </div>
+
+                <div class="input-field">
+                    <label for="rate">年利率(%)</label>
+                    <input type="number" id="rate" placeholder="例如：5表示5%">
+                </div>
+
+                <div class="input-field">
+                    <label for="time">投资年限</label>
+                    <input type="number" id="time" placeholder="请输入年限">
+                </div>
+
+                <div class="input-field">
+                    <label for="compounds">计息周期</label>
+                    <select id="compounds">
+                        <option value="1">年复利</option>
+                        <option value="12" selected>月复利</option>
+                        <option value="365">日复利</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="calculate" class="calculate-btn">计算</button>
+
+            <div id="result" class="result hidden">
+                <h2>计算结果</h2>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <span class="label">最终金额</span>
+                        <span class="value" id="finalAmount">¥0.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">利息收益</span>
+                        <span class="value" id="interest">¥0.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">总收益率</span>
+                        <span class="value" id="profitRate">0.00%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
